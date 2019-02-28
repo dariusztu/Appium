@@ -54,9 +54,9 @@ public class FirstTest {
     }
 
     @Test
-    public void returnTrueIfVisible() {
 
-        public void basicTest () throws InterruptedException {
+
+        public void basicTest() throws InterruptedException {
             //Click and pass Splash
             wait.until(ExpectedConditions.visibilityOfElementLocated
                     (By.id("com.android.calculator2.Calculator.app:id/animation_view"))).click();
@@ -76,8 +76,8 @@ public class FirstTest {
             }
 
             //Click second job
-            wait.until(ExpectedConditions.visibilityOfElementLocated
-                    (By.xpath(secondNewJob))).click();
+           // wait.until(ExpectedConditions.visibilityOfElementLocated
+             //       (By.xpath(secondNewJob))).click();
 
         }
 
