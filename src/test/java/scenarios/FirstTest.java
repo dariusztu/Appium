@@ -45,7 +45,7 @@ public class FirstTest {
 
     @Before
     public void setupDriver() {
-        driver = new AppiumDriver();
+
     }
 
     @After
@@ -83,4 +83,4 @@ public class FirstTest {
 
     }
 
-}
+
