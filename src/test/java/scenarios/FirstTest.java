@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,11 +20,10 @@ import java.net.URL;
 
 public class FirstTest {
 
-    public AppiumDriver<MobileElement> driver;
-
     private BasePage basepage;
-
+    WebDriver driver;
     public WebDriverWait wait;
+
 
     @BeforeClass
 
@@ -38,14 +38,14 @@ public class FirstTest {
         caps.setCapability("appPackage", "com.android.calculcator2.Calculator");
         caps.setCapability("appActivity","com.android.calculcator2.Calculator");
         caps.setCapability("noReset","false");
-        driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"),caps);
+        driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"),caps);
         wait = new WebDriverWait(driver, 10);
 
     }
 
     @Before
     public void setupDriver() {
-        driver = new AndroidDriver();
+        driver = new AppiumDriver();
     }
 
     @After
