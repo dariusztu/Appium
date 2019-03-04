@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
+import static org.assertj.core.api.Assertions.*;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -56,28 +57,14 @@ public class FirstTest {
     @Test
 
 
-        public void basicTest() throws InterruptedException {
-            //Click and pass Splash
-           /* wait.until(ExpectedConditions.visibilityOfElementLocated
-                    (By.id("com.android.calculator2.Calculator.app:id/animation_view"))).click(); */
-
-            //Click and pass Tutorial
+        public void checkIfChosenNumberAndDisplayedNumberAreEqual() throws InterruptedException {
             wait.until(ExpectedConditions.visibilityOfElementLocated
                     (By.id("com.android.calculator2:id/digit_7"))).click();
+            String outputText1 = driver.findElement(By.id("com.android.calculator2:id/formula")).getText();
+            System.out.println(outputText1);
+                    assertThat(outputText1).isEqualTo("7");
 
-            //Click to "Is Ariyorum" Button
-           /* wait.until(ExpectedConditions.visibilityOfElementLocated
-                    (By.id("com.isinolsun.app:id/bluecollar_type_button"))).click();
 
-*/
-            //Notification Allow
-     /*       if (driver.findElements(By.id("com.android.packageinstaller:id/permission_allow_button")).size()>0) {
-                driver.findElements(By.id("com.android.packageinstaller:id/permission_allow_button")).get(0).click();
-            }
-*/
-            //Click second job
-           // wait.until(ExpectedConditions.visibilityOfElementLocated
-             //       (By.xpath(secondNewJob))).click();
 
         }
 
