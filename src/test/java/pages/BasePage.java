@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
-    AndroidDriver driver;
+    WebDriver driver;
     //private static String url = "";
 
     public BasePage(AndroidDriver driver) {

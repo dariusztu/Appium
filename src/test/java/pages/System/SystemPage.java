@@ -19,8 +19,8 @@ public class SystemPage extends BasePage {
 
     String app_package_name = "com.flipkart.android:id/";
 
-    @FindBy(id = app_package_name + "user_id");
-    private WebElement userId;
+   /* @FindBy(id = app_package_name + "user_id");
+    private WebElement userId; */
 
 
 }
