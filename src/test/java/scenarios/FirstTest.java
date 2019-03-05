@@ -68,7 +68,7 @@ public class FirstTest {
                     .clickButton0()
                     .clickEqualsButton();
             assertThat(basepageObject.calculatorResultReturnText()).isEqualTo("300");
-            
+
 
 
 
