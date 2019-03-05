@@ -21,9 +21,10 @@ import java.net.URL;
 
 public class FirstTest {
 
-    private BasePage basepage;
+    private BasePage basepageObject;
     public static WebDriver driver;
-    public static WebDriverWait wait;
+
+
 
 
     @BeforeClass
@@ -40,7 +41,7 @@ public class FirstTest {
         caps.setCapability("appActivity","com.android.calculator2.Calculator");
         caps.setCapability("noReset","false");
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"),caps);
-        wait = new WebDriverWait(driver, 10);
+
 
     }
 
@@ -57,12 +58,24 @@ public class FirstTest {
     @Test
 
 
-        public void checkIfChosenNumberAndDisplayedNumberAreEqual() throws InterruptedException {
-            wait.until(ExpectedConditions.visibilityOfElementLocated
-                    (By.id("com.android.calculator2:id/digit_7"))).click();
-            String outputText1 = driver.findElement(By.id("com.android.calculator2:id/formula")).getText();
-            System.out.println(outputText1);
-                    assertThat(outputText1).isEqualTo("7");
+        public void checkIfFiveMultiplyBy60Equals300() throws InterruptedException {
+        /*   wait.until(ExpectedConditions.visibilityOfElementLocated
+                    (By.id("com.android.calculator2:id/digit_7"))).click(); */
+            basepageObject = new BasePage(driver);
+            basepageObject.clickButton5()
+                    .clickMultiplyButton()
+                    .clickButton6()
+                    .clickButton0()
+                    .clickEqualsButton();
+            assertThat(basepageObject.calculatorResultReturnText()).isEqualTo("300");
+            
+
+
+
+
+            //String outputText1 = driver.findElement(By.id("com.android.calculator2:id/formula")).getText();
+           // System.out.println(outputText1);
+             //       assertThat(outputText1).isEqualTo("7");
 
 
 
