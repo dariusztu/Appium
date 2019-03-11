@@ -1,20 +1,18 @@
 package pages;
 
-import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
     private WebDriver driver;
     public static WebDriverWait wait;
-    //private static String url = "";
+
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -85,7 +83,6 @@ public class BasePage {
     private WebElement clearButton;
 
 
-
     public BasePage clickButton0() {
         button0.click();
         return this;
@@ -142,7 +139,7 @@ public class BasePage {
     }
 
     public BasePage clickMultiplyButton() {
-       multiplyButton.click();
+        multiplyButton.click();
         return this;
     }
 
@@ -157,12 +154,12 @@ public class BasePage {
     }
 
     public BasePage clickEqualsButton() {
-       equalsButton.click();
+        equalsButton.click();
         return this;
     }
 
     public BasePage clickDeleteButton() {
-       deleteButton.click();
+        deleteButton.click();
         return this;
     }
 
@@ -170,8 +167,6 @@ public class BasePage {
         clearButton.click();
         return this;
     }
-
-
 
 
     public String calculatorOutputReturnText() {
@@ -183,7 +178,6 @@ public class BasePage {
         String outputText = calculatorResult.getText();
         return outputText;
     }
-
 
 
 }
