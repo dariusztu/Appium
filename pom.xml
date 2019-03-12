@@ -4,6 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+        <AppiumbuildVersion>7.0.0</AppiumbuildVersion>
+        <JunitbuildVersion>4.12</JunitbuildVersion>
+        <assertjbuildVersion>3.11.1</assertjbuildVersion>
+        <seleniumbuildVersion>3.141.59</seleniumbuildVersion>
+    </properties>
+
     <groupId>Appium</groupId>
     <artifactId>ApppiumProject</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -12,26 +19,26 @@
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>7.0.0</version>
+            <version>${AppiumbuildVersion}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${JunitbuildVersion}</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.11.1</version>
+            <version>${assertjbuildVersion}</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>${seleniumbuildVersion}/version>
         </dependency>
 
 
